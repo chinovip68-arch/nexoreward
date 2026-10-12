@@ -33,6 +33,7 @@
 <script>
 const toastEl=document.getElementById('toast');let toastTimer;function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toastEl.classList.remove('show'),2800)}document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('refcode').textContent);toast('Código de prueba copiado. No es un enlace de referido real.')}catch(e){toast('Tu código de prueba es NEXO-7K2P')}});document.querySelectorAll('[data-task]').forEach(b=>b.addEventListener('click',()=>toast('Demo solamente: '+b.dataset.task+'. Aún no hay proveedor ni recompensa real.')));document.getElementById('alltasks').addEventListener('click',()=>toast('Las tareas reales se añadirán tras aprobar un proveedor.'));document.getElementById('history').addEventListener('click',()=>toast('Este historial contiene únicamente movimientos de ejemplo.'));
 
+</script>
 <script type="module">
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 
