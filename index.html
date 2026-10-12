@@ -5,10 +5,26 @@
 <title>NexoReward — Demo</title>
 <style>
 :root{color-scheme:light dark;--bg:light-dark(#f5f7fb,#0b1020);--panel:light-dark(#fff,#131b2e);--panel2:light-dark(#f0f4fa,#1b2740);--text:light-dark(#172033,#edf2ff);--muted:light-dark(#65718a,#a5b2cc);--line:light-dark(#e1e7f0,#2a3650);--accent:light-dark(#5b5ce2,#9293ff);--green:light-dark(#07885e,#48d6a2)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}.root{min-height:100vh;background:var(--bg)}button,input{font:inherit}button{cursor:pointer}.layout{max-width:1180px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:21px;letter-spacing:-.6px}.logo{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#7777ff,#31d7a0);display:grid;place-items:center;color:white;font-weight:900}.user{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px}.avatar{width:34px;height:34px;border-radius:50%;background:var(--panel2);display:grid;place-items:center;color:var(--accent);font-weight:800}.welcome{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}.eyebrow{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent);font-weight:800}.welcome h1{font-size:clamp(26px,4vw,36px);letter-spacing:-1.3px;margin:5px 0}.muted{color:var(--muted)}.pill{font-size:11px;border:1px solid var(--line);border-radius:100px;padding:7px 10px;color:var(--muted);white-space:nowrap}.notice{border:1px solid light-dark(#d8d8ff,#393b78);background:light-dark(#f0f0ff,#1b2143);border-radius:14px;padding:12px 15px;color:var(--muted);font-size:13px;margin-bottom:20px}.notice strong{color:var(--text)}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.statlabel{color:var(--muted);font-size:13px}.statvalue{font-size:30px;letter-spacing:-1px;font-weight:800;margin:8px 0 2px}.statfoot{font-size:12px;color:var(--green)}.grid{display:grid;grid-template-columns:1.35fr .85fr;gap:16px}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.sectionhead h2{font-size:17px;margin:0;letter-spacing:-.3px}.link{border:0;background:none;color:var(--accent);font-weight:750;font-size:13px}.refbox{background:var(--panel2);border:1px dashed light-dark(#b8bbf6,#5056a5);border-radius:14px;padding:15px;margin-bottom:15px}.refrow{display:flex;align-items:center;gap:8px;margin-top:10px}.code{font-weight:850;font-size:19px;letter-spacing:2px;flex:1}.btn{border:0;border-radius:11px;padding:10px 14px;background:var(--accent);color:white;font-weight:750}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn:disabled{opacity:.45;cursor:not-allowed}.progresshead{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin:13px 0 8px}.track{height:7px;background:var(--panel2);border-radius:20px;overflow:hidden}.fill{height:100%;width:42%;background:linear-gradient(90deg,var(--accent),#3bd6a0);border-radius:20px}.tasklist{display:grid;gap:10px}.task{display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:14px;padding:13px}.taskicon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--panel2);font-size:20px;flex-shrink:0}.taskmain{flex:1;min-width:0}.tasktitle{font-weight:750;font-size:14px}.taskdesc{font-size:12px;color:var(--muted)}.reward{font-size:13px;font-weight:850;color:var(--green);white-space:nowrap}.taskbutton{font-size:12px;padding:7px 10px;border-radius:9px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-weight:700}.side{display:grid;gap:16px;align-content:start}.withdraw{text-align:center}.withdraw .statvalue{font-size:28px}.withdraw p{font-size:12px;color:var(--muted)}.withdraw .btn{width:100%;margin-top:10px}.history{display:grid;gap:13px}.historyrow{display:flex;align-items:center;gap:10px}.historyrow .taskicon{width:34px;height:34px;font-size:16px}.historyrow .taskmain{font-size:13px}.historyrow .taskdesc{font-size:11px}.historyrow .reward{margin-left:auto}.footer{padding:20px 0;text-align:center;color:var(--muted);font-size:11px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:12px 18px;border-radius:12px;box-shadow:0 8px 35px #0002;display:none;max-width:90vw;z-index:5}.toast.show{display:block}@media(max-width:760px){.layout{padding:16px}.stats{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.welcome{align-items:start;flex-direction:column}.user .hide{display:none}.card{padding:16px}.task{gap:9px}.reward{font-size:12px}}
+
+.auth-card{margin-bottom:18px}.auth-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.auth-card label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px}.auth-card input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text)}.auth-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.auth-status{font-size:13px;margin-top:10px;min-height:20px;color:var(--muted)}.auth-user{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.auth-note{font-size:12px;color:var(--muted);margin-top:8px}@media(max-width:600px){.auth-grid{grid-template-columns:1fr}}
 </style></head>
 <body><div class="root"><div class="layout">
 <header class="top"><div class="brand"><div class="logo">N</div>NexoReward</div><div class="user"><span class="hide">Panel de usuario</span><div class="avatar">U</div><strong>Usuario demo</strong></div></header>
 <section class="welcome"><div><div class="eyebrow">Tu centro de recompensas</div><h1>¡Hola! 👋</h1><div class="muted">Gana recompensas completando actividades y compartiendo tu código.</div></div><div class="pill">● MODO DEMOSTRACIÓN</div></section>
+<section class="card auth-card" aria-labelledby="auth-title">
+<div class="sectionhead"><h2 id="auth-title">Tu cuenta NexoReward</h2><span class="pill">Acceso real · Supabase</span></div>
+<div id="auth-form">
+<p class="muted" style="font-size:13px;margin-top:-4px">Regístrate con tu correo o inicia sesión si ya tienes una cuenta.</p>
+<div class="auth-grid">
+<div><label for="auth-email">Correo electrónico</label><input id="auth-email" type="email" autocomplete="email" placeholder="tu@correo.com" required></div>
+<div><label for="auth-password">Contraseña (mínimo 8 caracteres)</label><input id="auth-password" type="password" autocomplete="current-password" minlength="8" placeholder="Crea una contraseña segura" required></div>
+</div>
+<div class="auth-actions"><button class="btn" id="auth-signup">Crear cuenta</button><button class="btn secondary" id="auth-login">Iniciar sesión</button></div>
+<div class="auth-note">Usa una contraseña única. Si la confirmación de correo está activada, revisa tu bandeja de entrada para confirmar el registro.</div>
+</div>
+<div id="auth-session" hidden><div class="auth-user"><strong id="auth-user-email"></strong><button class="btn secondary" id="auth-logout">Cerrar sesión</button></div><p class="auth-note">Tu sesión está conectada. El saldo, las tareas y los retiros que ves más abajo siguen siendo datos de demostración.</p></div>
+<div id="auth-status" class="auth-status" role="status" aria-live="polite"></div>
+</section>
 <div class="notice"><strong>Prototipo demostrativo.</strong> Los saldos, tareas y recompensas son ficticios. Esta página todavía no procesa dinero ni pagos reales.</div>
 <section class="stats"><div class="card"><div class="statlabel">Saldo disponible (demo)</div><div class="statvalue">$4.20</div><div class="statfoot">↑ Ejemplo de saldo</div></div><div class="card"><div class="statlabel">Referidos válidos (demo)</div><div class="statvalue">7</div><div class="muted" style="font-size:12px">Invitaciones de ejemplo</div></div><div class="card"><div class="statlabel">Ganancias totales (demo)</div><div class="statvalue">$12.80</div><div class="muted" style="font-size:12px">Acumulado ilustrativo</div></div></section>
 <div class="grid"><main class="card"><div class="sectionhead"><h2>Invita y gana</h2><span class="pill">Programa de referidos</span></div><p class="muted" style="font-size:13px;margin-top:-5px">Comparte tu código. Recompensa de $10 solo como objetivo de diseño; en producción se habilitará cuando exista un proveedor de ingresos y fondos suficientes, y tras validar la actividad del referido.</p><div class="refbox"><div class="statlabel">Tu código de invitación de prueba</div><div class="refrow"><div class="code" id="refcode">NEXO-7K2P</div><button class="btn" id="copy">Copiar código</button></div></div><div class="progresshead"><span>Progreso ilustrativo hacia el retiro</span><strong>$4.20 / $200.00</strong></div><div class="track"><div class="fill" style="width:2.1%"></div></div><div style="height:24px"></div><div class="sectionhead"><h2>Tareas y ofertas</h2><button class="link" id="alltasks">Ver todas</button></div><div class="tasklist" id="tasklist"><div class="task"><div class="taskicon">🧩</div><div class="taskmain"><div class="tasktitle">Completa un perfil de ejemplo</div><div class="taskdesc">Tarea de demostración · No paga dinero</div></div><div class="reward">+$0.20</div><button class="taskbutton" data-task="Perfil de ejemplo">Probar</button></div><div class="task"><div class="taskicon">📣</div><div class="taskmain"><div class="tasktitle">Oferta patrocinada (demo)</div><div class="taskdesc">Pendiente de proveedor real</div></div><div class="reward">+$0.50</div><button class="taskbutton" data-task="Oferta patrocinada">Ver</button></div><div class="task"><div class="taskicon">🎯</div><div class="taskmain"><div class="tasktitle">Encuesta de prueba</div><div class="taskdesc">Actividad ficticia para mostrar el diseño</div></div><div class="reward">+$0.15</div><button class="taskbutton" data-task="Encuesta de prueba">Ver</button></div></div></main>
@@ -16,4 +32,87 @@
 <footer class="footer">NexoReward · Concepto visual independiente · No afiliado a XenPaid · Datos ficticios de demostración</footer></div></div><div class="toast" id="toast" role="status"></div>
 <script>
 const toastEl=document.getElementById('toast');let toastTimer;function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toastEl.classList.remove('show'),2800)}document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('refcode').textContent);toast('Código de prueba copiado. No es un enlace de referido real.')}catch(e){toast('Tu código de prueba es NEXO-7K2P')}});document.querySelectorAll('[data-task]').forEach(b=>b.addEventListener('click',()=>toast('Demo solamente: '+b.dataset.task+'. Aún no hay proveedor ni recompensa real.')));document.getElementById('alltasks').addEventListener('click',()=>toast('Las tareas reales se añadirán tras aprobar un proveedor.'));document.getElementById('history').addEventListener('click',()=>toast('Este historial contiene únicamente movimientos de ejemplo.'));
-</script></body></html>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+const SUPABASE_URL = 'https://lkngskrstcrghnnrpfwp.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_aNLKj1uNDV5QoCfmYA_sjB_aNLKj1uNDV5QoCfmYA_sj_bfamArDn';
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+const emailInput = document.getElementById('auth-email');
+const passwordInput = document.getElementById('auth-password');
+const authForm = document.getElementById('auth-form');
+const authSession = document.getElementById('auth-session');
+const authUserEmail = document.getElementById('auth-user-email');
+const authStatus = document.getElementById('auth-status');
+const headerUser = document.querySelector('.top .user strong');
+const headerAvatar = document.querySelector('.top .avatar');
+
+function setStatus(message, isError = false) {
+  authStatus.textContent = message;
+  authStatus.style.color = isError ? '#dc5353' : '';
+}
+function showSession(user) {
+  const signedIn = Boolean(user);
+  authForm.hidden = signedIn;
+  authSession.hidden = !signedIn;
+  if (signedIn) {
+    authUserEmail.textContent = user.email || 'Cuenta conectada';
+    if (headerUser) headerUser.textContent = user.email || 'Usuario';
+    if (headerAvatar) headerAvatar.textContent = (user.email || 'U').slice(0,1).toUpperCase();
+  } else {
+    if (headerUser) headerUser.textContent = 'Visitante';
+    if (headerAvatar) headerAvatar.textContent = 'U';
+  }
+}
+async function handleAuthError(error) {
+  const messages = {
+    'Invalid login credentials': 'Correo o contraseña incorrectos.',
+    'Email not confirmed': 'Confirma tu correo electrónico antes de iniciar sesión.',
+    'User already registered': 'Ese correo ya tiene una cuenta. Prueba iniciar sesión.'
+  };
+  setStatus(messages[error.message] || ('No se pudo completar la operación: ' + error.message), true);
+}
+document.getElementById('auth-signup').addEventListener('click', async () => {
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  if (!email || password.length < 8) {
+    setStatus('Escribe un correo válido y una contraseña de al menos 8 caracteres.', true);
+    return;
+  }
+  setStatus('Creando tu cuenta…');
+  const { data, error } = await supabase.auth.signUp({ email, password });
+  if (error) return handleAuthError(error);
+  if (data.session) {
+    showSession(data.user);
+    setStatus('¡Cuenta creada y sesión iniciada!');
+  } else {
+    setStatus('Registro iniciado. Revisa tu correo y confirma la dirección antes de iniciar sesión.');
+  }
+});
+document.getElementById('auth-login').addEventListener('click', async () => {
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  if (!email || !password) {
+    setStatus('Escribe tu correo y contraseña.', true);
+    return;
+  }
+  setStatus('Iniciando sesión…');
+  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+  if (error) return handleAuthError(error);
+  showSession(data.user);
+  setStatus('¡Sesión iniciada correctamente!');
+});
+document.getElementById('auth-logout').addEventListener('click', async () => {
+  setStatus('Cerrando sesión…');
+  const { error } = await supabase.auth.signOut();
+  if (error) return handleAuthError(error);
+  showSession(null);
+  setStatus('Has cerrado sesión.');
+});
+const { data: { session } } = await supabase.auth.getSession();
+showSession(session?.user || null);
+supabase.auth.onAuthStateChange((_event, session) => showSession(session?.user || null));
+</script>
+</body></html>
